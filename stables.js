@@ -106,6 +106,11 @@ let luna = {
     latePayment: lunaBoard * lateFee,
 }
 
+//NEW HORSE FOR ASSIGNMENT 2 -- HORSE OBJECT
+let bojack = {
+    name: "Bojack"
+}
+
 // WELCOME MESSAGE VARIABLE
 
 let welcomeMessage = " Welcome to " + stableName + "! ";
@@ -128,7 +133,56 @@ console.log("");
 console.log(luckyLateFeeMessage);
 
 //------------------ASSIGNMENT2------------------------
-//Another horse will be added in the list above, in assignment month, for the sake of organization
+
+let lucky = {
+
+    name: "Lucky",
+    nickname: "Luck",
+    favoriteSnack: "oranges",
+    age: 8,
+    monthlyRent: 500,
+    location: true, 
+    colour: "brown",
+    isFriendly: true
+};
+
+let verity = {
+
+    name: "Verity",
+    nickname: "Vee",
+    favoriteSnack: "beef",
+    age: 9,
+    monthlyRent: 900,
+    location: false, 
+    colour: "yellow",
+    isFriendly: false
+};
+
+let lucky = {
+
+    name: "Lucky",
+    nickname: "Luck",
+    favoriteSnack: "oranges",
+    age: 8,
+    monthlyRent: 500,
+    location: true, 
+    colour: "brown"
+    isFriendly: true
+};
+
+let lucky = {
+
+    name: "Lucky",
+    nickname: "Luck",
+    favoriteSnack: "oranges",
+    age: 8,
+    monthlyRent: 500,
+    location: true, 
+    colour: "brown"
+    isFriendly: true
+};
+
+
 
 let horses = [lucky, verity, luna];
 
