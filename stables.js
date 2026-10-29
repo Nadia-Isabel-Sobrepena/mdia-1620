@@ -71,66 +71,62 @@
 
 
 // ASSIGNMENT 1
+// Do we delete the entire thing in assignment 1??????? !!!!************ 
 
 // JAVASCRIPT STABLES 
 
-let stableName = "Javascript Stables";
-let horses = ["Lucky", "Verity", "Luna"];
-let lateFee = 1.2;
+// let stableName = "Javascript Stables";
+// let horses = ["Lucky", "Verity", "Luna"];
+// let lateFee = 1.2;
 
 
-let luckyBoard = 500;
-let lucky = {
-    name: "Lucky",
-    age: 8,
-    favoriteSnack: "oranges",
-    board: luckyBoard,
-    latePayment: luckyBoard *  lateFee,
-}
+// let luckyBoard = 500;
+// let lucky = {
+//     name: "Lucky",
+//     age: 8,
+//     favoriteSnack: "oranges",
+//     board: luckyBoard,
+//     latePayment: luckyBoard *  lateFee,
+// }
 
-let verityBoard = 900
-let verity = {
-    name: "Verity",
-    age: 9,
-    favoriteSnack: "beef",
-    board: verityBoard,
-    latePayment: verityBoard * lateFee,
-}
+// let verityBoard = 900
+// let verity = {
+//     name: "Verity",
+//     age: 9,
+//     favoriteSnack: "beef",
+//     board: verityBoard,
+//     latePayment: verityBoard * lateFee,
+// }
 
-let lunaBoard = 200;
-let luna = {
-    name: "Luna",
-    age: 4,
-    favoriteSnack: "Yogurt",
-    board: lunaBoard,
-    latePayment: lunaBoard * lateFee,
-}
+// let lunaBoard = 200;
+// let luna = {
+//     name: "Luna",
+//     age: 4,
+//     favoriteSnack: "Yogurt",
+//     board: lunaBoard,
+//     latePayment: lunaBoard * lateFee,
+// }
 
-//NEW HORSE FOR ASSIGNMENT 2 -- HORSE OBJECT
-let bojack = {
-    name: "Bojack"
-}
+// // WELCOME MESSAGE VARIABLE
 
-// WELCOME MESSAGE VARIABLE
+// let welcomeMessage = " Welcome to " + stableName + "! ";
+// let horsesIntro = " Meet the horses, " + horses + "!";
+// console.log(welcomeMessage);
+// console.log(horsesIntro);
 
-let welcomeMessage = " Welcome to " + stableName + "! ";
-let horsesIntro = " Meet the horses, " + horses + "!";
-console.log(welcomeMessage);
-console.log(horsesIntro);
+// // SPACE
+// console.log("");
+// //SPACE
 
-// SPACE
-console.log("");
-//SPACE
+// //LATE FEE MESSAGES VARIABLES
+// let luckyLateFeeMessage = " If you are late to board " + lucky.name + ", you owe " + lucky.latePayment + "$";
 
-//LATE FEE MESSAGES VARIABLES
-let luckyLateFeeMessage = " If you are late to board " + lucky.name + ", you owe " + lucky.latePayment + "$";
+// //SPACE
+// console.log("");
+// //SPACE
 
-//SPACE
-console.log("");
-//SPACE
-
-//LATE FEE MESSAGES CONSOLE.LOG
-console.log(luckyLateFeeMessage);
+// //LATE FEE MESSAGES CONSOLE.LOG
+// console.log(luckyLateFeeMessage);
 
 //------------------ASSIGNMENT2------------------------
 
@@ -158,32 +154,57 @@ let verity = {
     isFriendly: false
 };
 
-let lucky = {
+let luna = {
 
-    name: "Lucky",
-    nickname: "Luck",
-    favoriteSnack: "oranges",
-    age: 8,
-    monthlyRent: 500,
+    name: "Luna",
+    nickname: "Lulu",
+    favoriteSnack: "Yogurt",
+    age: 4,
+    monthlyRent: 200,
     location: true, 
-    colour: "brown"
+    colour: "black",
     isFriendly: true
 };
 
-let lucky = {
+//NEW HORSE ADDED
+let charlie = {
 
-    name: "Lucky",
-    nickname: "Luck",
-    favoriteSnack: "oranges",
-    age: 8,
-    monthlyRent: 500,
+    name: "Charlie",
+    nickname: "Chuck",
+    favoriteSnack: "apples",
+    age: 5,
+    monthlyRent: 400,
     location: true, 
-    colour: "brown"
+    colour: "grey",
     isFriendly: true
 };
 
+let horses = [lucky, verity, luna, charlie];
+
+lucky.isHungry = true;
+verity.isHungry = false;
+luna.isHungry = true;
+charlie.isHungry = false;
 
 
-let horses = [lucky, verity, luna];
+let totalStalls = 20;
+
+//available stalls
+function checkAvailableStalls(stalls, horseArray) {
+    let available = stalls - horseArray.length;
+    console.log("Available stalls: " + available);
+}
+checkAvailableStalls(totalStalls, horses);
 
 
+function logLateRent(horse) {
+    let lateAmount = horse.monthlyRent * 1.20;
+    console.log(horse.name + " owes $" + lateAmount + " for late rent.");
+}
+logLateRent(lucky);
+
+function getHorseNickname(horse) {
+    return horse.nickname;
+}
+let horseNickname = getHorseNickname(verity);
+console.log(horseNickname);
