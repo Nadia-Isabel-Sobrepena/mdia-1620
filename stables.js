@@ -69,6 +69,9 @@
 // Create a variable and use it to store a message that monthly payment is late, and the amount owing. Include the name of one of your horses in the message.
 
 
+
+// ASSIGNMENT 1
+
 // JAVASCRIPT STABLES 
 
 let stableName = "Javascript Stables";
@@ -123,6 +126,7 @@ console.log("");
 
 //LATE FEE MESSAGES CONSOLE.LOG
 console.log(luckyLateFeeMessage);
-//test
-//play this game
-//bitburner
+
+//------------------ASSIGNMENT2------------------------
+
+let horses = [lucky, verity, luna];
