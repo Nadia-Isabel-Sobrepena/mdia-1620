@@ -128,5 +128,8 @@ console.log("");
 console.log(luckyLateFeeMessage);
 
 //------------------ASSIGNMENT2------------------------
+//Another horse will be added in the list above, in assignment month, for the sake of organization
 
 let horses = [lucky, verity, luna];
+
+
