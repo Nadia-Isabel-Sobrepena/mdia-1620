@@ -208,3 +208,6 @@ function getHorseNickname(horse) {
 }
 let horseNickname = getHorseNickname(verity);
 console.log(horseNickname);
+
+//FINAL PART 
+
