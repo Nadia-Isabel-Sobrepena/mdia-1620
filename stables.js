@@ -48,7 +48,7 @@ let stableName = "Javascript Stables";
 let welcomeMessage = "Welcome to " + stableName + "!";
 console.log(welcomeMessage);
 
-// Assisgnment 2
+// ASSIGNMENT 2
 let lucky = {
     name: "Lucky",
     nickname: "Luck",
