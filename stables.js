@@ -216,6 +216,9 @@ let treatToCheck = "apples";
 function checkHorseTreats(horseArray, treat) {
     for (const horse of horseArray) {
         if (horse.favoriteSnack === treat) {
+            console.log(horse.name + " loves " + treat + "!");
+            return;
+        } else {
             console.log(horse.name + " does not like " + treat + ".");
         }
     }
