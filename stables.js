@@ -220,3 +220,16 @@ function checkHorseTreats(horseArray, treat) {
         }
     }
 }
+checkHorseTreats(horses, treatToCheck);
+
+function checkFriendliness(horse) {
+    if (horse.isFriendly === true) {
+        console.log(horse.name + " is friendly.");
+    } else {
+        console.log(horse.name + " is not friendly...")
+    }
+}
+
+for (const horse of horses) {
+    checkFriendliness(horse);
+}
