@@ -318,7 +318,4 @@ function feedHorses(horseArray) {
     }
 }
 
-moveHorsesOutside([lucky]);
-feedHorses(horses);
-moveHorsesOutside([luna, charlie]);
-moveHorsesOutside(horses, true);
+
