@@ -233,3 +233,25 @@ function checkFriendliness(horse) {
 for (const horse of horses) {
     checkFriendliness(horse);
 }
+
+function moveHorsesOutside(selectedHorses) {
+    for (const horse of selectedHorses) {
+        horse.location = false;
+        console.log(horse.name + " has been moved outside o spend time in the sun.");
+    }
+}
+moveHorsesOutside([lucky]);
+moveHorsesOutside([luna, charlie]);
+moveHorsesOutside(horses);
+
+function feedHorses(horseArray) {
+    for (const horse of horseArray) {
+        if (horse.location === false) {
+            horse.location = true;
+            console.log("Calling " + horse.name + " inside for food.");
+        }
+        horse.isHungry = false;
+        console.log(horse.name + " has been fed " + horse.favoriteSnack + ".");
+    }
+}
+feedHorses(horses);
