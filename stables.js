@@ -211,3 +211,12 @@ console.log(horseNickname);
 
 //FINAL PART 
 
+let treatToCheck = "apples"; 
+
+function checkHorseTreats(horseArray, treat) {
+    for (const horse of horseArray) {
+        if (horse.favoriteSnack === treat) {
+            console.log(horse.name + " does not like " + treat + ".");
+        }
+    }
+}
