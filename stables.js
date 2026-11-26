@@ -69,38 +69,44 @@
 // Create a variable and use it to store a message that monthly payment is late, and the amount owing. Include the name of one of your horses in the message.
 
 
-//------------------ASSIGNMENT2------------------------
+
+// INTRODUCTION!!!!
+
+let stableName = "Javascript Stables";
+let welcomeMessage = "Welcome to " + stableName + "!";
+console.log(welcomeMessage);
+
+// Assisgnment 2
+
 
 let lucky = {
-
     name: "Lucky",
     nickname: "Luck",
     favoriteSnack: "oranges",
     age: 8,
     monthlyRent: 500,
-    location: true, 
+    isInside: true,
     colour: "brown",
     isFriendly: true,
     introduce: function () {
-         console.log("Hi, I'm " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
+        console.log("Hi, I'm " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
     },
     neigh: function () {
         console.log(this.name + " neighs happily!");
-    },
+    }
 };
 
 let verity = {
-
     name: "Verity",
     nickname: "Vee",
     favoriteSnack: "beef",
     age: 9,
     monthlyRent: 900,
-    location: false, 
+    isInside: false,
     colour: "yellow",
     isFriendly: false,
     introduce: function () {
-         console.log("Hey, its me, its " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
+        console.log("Hey, its me, its " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
     },
     smiles: function () {
         console.log(this.name + " smiles suspiciously...");
@@ -108,13 +114,12 @@ let verity = {
 };
 
 let luna = {
-
     name: "Luna",
     nickname: "Lulu",
     favoriteSnack: "Yogurt",
     age: 4,
     monthlyRent: 200,
-    location: true, 
+    isInside: true,
     colour: "black",
     isFriendly: true,
     introduce: function () {
@@ -122,17 +127,18 @@ let luna = {
     },
     nap: function () {
         console.log(this.name + " takes a nap.");
+    }
 };
 
-//NEW HORSE ADDED
-let charlie = {
+let horses = [lucky, verity, luna];
 
+let charlie = {
     name: "Charlie",
     nickname: "Chuck",
     favoriteSnack: "apples",
     age: 5,
     monthlyRent: 400,
-    location: true, 
+    isInside: true,
     colour: "grey",
     isFriendly: true,
     introduce: function () {
@@ -143,26 +149,23 @@ let charlie = {
     }
 };
 
-let horses = [lucky, verity, luna, charlie];
+horses.push(charlie);
 
-lucky.isHungry = true;
-verity.isHungry = false;
-luna.isHungry = true;
-charlie.isHungry = false;
-
+for (const horse of horses) {
+    horse.isHungry = true;
+}
 
 let totalStalls = 20;
 
-//available stalls
 function checkAvailableStalls(stalls, horseArray) {
     let available = stalls - horseArray.length;
     console.log("Available stalls: " + available);
 }
 checkAvailableStalls(totalStalls, horses);
 
-
 function logLateRent(horse) {
-    let lateAmount = horse.monthlyRent * 1.20;
+    let lateFee = 1.20;
+    let lateAmount = horse.monthlyRent * lateFee;
     console.log(horse.name + " owes $" + lateAmount + " for late rent.");
 }
 logLateRent(lucky);
@@ -173,9 +176,9 @@ function getHorseNickname(horse) {
 let horseNickname = getHorseNickname(verity);
 console.log(horseNickname);
 
-//FINAL PART 
+//FINAL PART
 
-let treatToCheck = "apples"; 
+let treatToCheck = "apples";
 
 function checkHorseTreats(horseArray, treat) {
     for (const horse of horseArray) {
@@ -193,7 +196,7 @@ function checkFriendliness(horse) {
     if (horse.isFriendly === true) {
         console.log(horse.name + " is friendly.");
     } else {
-        console.log(horse.name + " is not friendly...")
+        console.log(horse.name + " is not friendly...");
     }
 }
 
@@ -204,7 +207,7 @@ for (const horse of horses) {
 function moveHorsesOutside(selectedHorses) {
     for (const horse of selectedHorses) {
         horse.location = false;
-        console.log(horse.name + " has been moved outside o spend time in the sun.");
+        console.log(horse.name + " has been moved outside to spend time in the sun.");
     }
 }
 moveHorsesOutside([lucky]);
