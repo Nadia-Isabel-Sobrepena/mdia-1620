@@ -180,17 +180,14 @@ console.log(horseNickname);
 
 let treatToCheck = "apples";
 
-function checkHorseTreats(horseArray, treat) {
-    for (const horse of horseArray) {
-        if (horse.favoriteSnack === treat) {
-            console.log(horse.name + " loves " + treat + "!");
-            return;
-        } else {
-            console.log(horse.name + " does not like " + treat + ".");
-        }
+for (const horse of horses) {
+    if (horse.favoriteSnack === treatToCheck) {
+        console.log(horse.name + " loves " + treatToCheck + "!");
+        break;
+    } else {
+        console.log(horse.name + " does not like " + treatToCheck + ".");
     }
 }
-checkHorseTreats(horses, treatToCheck);
 
 function checkFriendliness(horse) {
     if (horse.isFriendly === true) {
@@ -204,24 +201,34 @@ for (const horse of horses) {
     checkFriendliness(horse);
 }
 
-function moveHorsesOutside(selectedHorses) {
+function moveHorsesOutside(selectedHorses, isDark = false) {
     for (const horse of selectedHorses) {
-        horse.location = false;
-        console.log(horse.name + " has been moved outside to spend time in the sun.");
+        if (isDark === true) {
+            if (horse.isInside === false) {
+                horse.isInside = true;
+                console.log("It's getting dark, " + horse.name + " goes into the stables.");
+            }
+        } else {
+            if (horse.isInside === true) {
+                horse.isInside = false;
+                console.log(horse.name + " has been moved outside to spend time in the sun.");
+            }
+        }
     }
 }
-moveHorsesOutside([lucky]);
-moveHorsesOutside([luna, charlie]);
-moveHorsesOutside(horses);
 
 function feedHorses(horseArray) {
     for (const horse of horseArray) {
-        if (horse.location === false) {
-            horse.location = true;
+        if (horse.isInside === false) {
+            horse.isInside = true;
             console.log("Calling " + horse.name + " inside for food.");
         }
         horse.isHungry = false;
         console.log(horse.name + " has been fed " + horse.favoriteSnack + ".");
     }
 }
+
+moveHorsesOutside([lucky]);
 feedHorses(horses);
+moveHorsesOutside([luna, charlie]);
+moveHorsesOutside(horses, true);
