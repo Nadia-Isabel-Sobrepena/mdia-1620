@@ -69,65 +69,6 @@
 // Create a variable and use it to store a message that monthly payment is late, and the amount owing. Include the name of one of your horses in the message.
 
 
-
-// ASSIGNMENT 1
-// Do we delete the entire thing in assignment 1??????? !!!!************ 
-
-// JAVASCRIPT STABLES 
-
-// let stableName = "Javascript Stables";
-// let horses = ["Lucky", "Verity", "Luna"];
-// let lateFee = 1.2;
-
-
-// let luckyBoard = 500;
-// let lucky = {
-//     name: "Lucky",
-//     age: 8,
-//     favoriteSnack: "oranges",
-//     board: luckyBoard,
-//     latePayment: luckyBoard *  lateFee,
-// }
-
-// let verityBoard = 900
-// let verity = {
-//     name: "Verity",
-//     age: 9,
-//     favoriteSnack: "beef",
-//     board: verityBoard,
-//     latePayment: verityBoard * lateFee,
-// }
-
-// let lunaBoard = 200;
-// let luna = {
-//     name: "Luna",
-//     age: 4,
-//     favoriteSnack: "Yogurt",
-//     board: lunaBoard,
-//     latePayment: lunaBoard * lateFee,
-// }
-
-// // WELCOME MESSAGE VARIABLE
-
-// let welcomeMessage = " Welcome to " + stableName + "! ";
-// let horsesIntro = " Meet the horses, " + horses + "!";
-// console.log(welcomeMessage);
-// console.log(horsesIntro);
-
-// // SPACE
-// console.log("");
-// //SPACE
-
-// //LATE FEE MESSAGES VARIABLES
-// let luckyLateFeeMessage = " If you are late to board " + lucky.name + ", you owe " + lucky.latePayment + "$";
-
-// //SPACE
-// console.log("");
-// //SPACE
-
-// //LATE FEE MESSAGES CONSOLE.LOG
-// console.log(luckyLateFeeMessage);
-
 //------------------ASSIGNMENT2------------------------
 
 let lucky = {
@@ -139,7 +80,13 @@ let lucky = {
     monthlyRent: 500,
     location: true, 
     colour: "brown",
-    isFriendly: true
+    isFriendly: true,
+    introduce: function () {
+         console.log("Hi, I'm " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
+    },
+    neigh: function () {
+        console.log(this.name + " neighs happily!");
+    },
 };
 
 let verity = {
@@ -151,7 +98,13 @@ let verity = {
     monthlyRent: 900,
     location: false, 
     colour: "yellow",
-    isFriendly: false
+    isFriendly: false,
+    introduce: function () {
+         console.log("Hey, its me, its " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
+    },
+    smiles: function () {
+        console.log(this.name + " smiles suspiciously...");
+    }
 };
 
 let luna = {
@@ -163,7 +116,12 @@ let luna = {
     monthlyRent: 200,
     location: true, 
     colour: "black",
-    isFriendly: true
+    isFriendly: true,
+    introduce: function () {
+        console.log("Hi, I'm " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
+    },
+    nap: function () {
+        console.log(this.name + " takes a nap.");
 };
 
 //NEW HORSE ADDED
@@ -176,7 +134,13 @@ let charlie = {
     monthlyRent: 400,
     location: true, 
     colour: "grey",
-    isFriendly: true
+    isFriendly: true,
+    introduce: function () {
+        console.log("Hi, I'm " + this.name + ", nickname " + this.nickname + ". I'm " + this.age + " years old and I love " + this.favoriteSnack + ".");
+    },
+    gallop: function () {
+        console.log(this.name + " gallops around the field.");
+    }
 };
 
 let horses = [lucky, verity, luna, charlie];
